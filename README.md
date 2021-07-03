@@ -1,7 +1,7 @@
 # Description
-Stock net profit ILS calculator
+Stock net profit calculator
 
-Considers USD->ILS current currency and stock price (yfinance)
+Considers USD to any current currency and stock price (yfinance)
 Considers 25% tax and possible [+3% tax](https://protocol.co.il/high-income-tax/)
 
 # Usage
@@ -15,6 +15,6 @@ plan = StockPlan(symbol='S',
                  number_of_shares=5000,
                  vest_from_first_month=False)
 
-print(calc_profit([plan]))
+print(calc_profit(stock_plans=[plan], local_currency='EUR'))
 ```
 See quickstar.py for a few more options

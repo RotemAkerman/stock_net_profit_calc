@@ -8,6 +8,6 @@ plan_b = StockPlan(symbol='S', start_date=datetime(2019, 12, 14), exercise_price
 
 print(f'S current price is: {get_current_price("S")}$')
 
-print(calc_profit([plan_a, plan_b]))  # Will calc by current stock price
+print(calc_profit(stock_plans=[plan_a, plan_b], local_currency='ILS'))  # Will calc by current stock price
 
-print(calc_profit([plan_a, plan_b], by_price=100))
+print(calc_profit(stock_plans=[plan_a, plan_b], by_price=100, local_currency='ILS'))
